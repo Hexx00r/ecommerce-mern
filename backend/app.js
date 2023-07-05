@@ -7,7 +7,7 @@ const cors = require("cors");
 const path = require("path");
 
 app.use(cors({
-  origin: ['deploy-mern-backend.vercel.app',],
+  origin: ['https://deploy-mern-backend.vercel.app',],
   credentials: true
 }));
 
