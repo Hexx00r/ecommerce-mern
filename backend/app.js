@@ -7,7 +7,7 @@ const cors = require("cors");
 const path = require("path");
 
 app.use(cors({
-  origin: ['https://ecommerce-backend-s26.vercel.app',],
+  origin: 'http://localhost:3000',
   credentials: true
 }));
 
