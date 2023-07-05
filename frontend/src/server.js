@@ -1,3 +1,3 @@
-export const server = "https://deploy-mern-backend.vercel.app/api/v2";
+export const server = "https://ecommerce-backend-s26.vercel.app/api/v2";
 
  
