@@ -1,3 +1,4 @@
-export const server = "https://ecommerce-backend-s26.vercel.app/api/v2";
+export const server = "http://localhost:6900/api/v2";
+
 
  
