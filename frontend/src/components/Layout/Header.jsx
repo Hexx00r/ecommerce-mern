@@ -13,6 +13,7 @@ import { CgProfile } from "react-icons/cg";
 import DropDown from "./DropDown";
 import Navbar from "./Navbar";
 import { useSelector } from "react-redux";
+import { backend_url } from "../../server";
 import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
@@ -58,7 +59,7 @@ const Header = ({ activeHeading }) => {
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
           <div>
             <Link to="/">
-            <img
+              <img
                 src={logo}
                 alt=""
                 className="h-24 w-full object-cover object-center ml-0 sm:-ml-2"
@@ -86,7 +87,7 @@ const Header = ({ activeHeading }) => {
                       <Link to={`/product/${i._id}`}>
                         <div className="w-full flex items-start-py-3">
                           <img
-                            src={`${i.images[0]?.url}`}
+                            src={`${backend_url}${i.images[0]}`}
                             alt=""
                             className="w-[40px] h-[40px] mr-[10px]"
                           />
@@ -177,8 +178,8 @@ const Header = ({ activeHeading }) => {
                 {isAuthenticated ? (
                   <Link to="/profile">
                     <img
-                      src={`${user?.avatar?.url}`}
-                      className="w-[35px] h-[35px] rounded-full"
+                      src={`${backend_url}${user?.avatar}`}
+                      className="w-[40px] h-[35px] rounded-full"
                       alt=""
                     />
                   </Link>
@@ -218,7 +219,7 @@ const Header = ({ activeHeading }) => {
           </div>
           <div>
             <Link to="/">
-            <img
+              <img
                 src={logo}
                 alt=""
                 className="h-12 mt- mx-auto sm:-ml-0.5 cursor-pointer"
@@ -286,7 +287,7 @@ const Header = ({ activeHeading }) => {
                         <Link to={`/product/${Product_name}`}>
                           <div className="flex items-center">
                             <img
-                              src={i.image_Url[0]?.url}
+                              src={i.image_Url[0].url}
                               alt=""
                               className="w-[50px] mr-2"
                             />
@@ -316,7 +317,7 @@ const Header = ({ activeHeading }) => {
                   <div>
                     <Link to="/profile">
                       <img
-                        src={`${user.avatar?.url}`}
+                        src={`${backend_url}${user.avatar}`}
                         alt=""
                         className="w-[60px] h-[60px] rounded-full border-[3px] border-[#0eae88]"
                       />
